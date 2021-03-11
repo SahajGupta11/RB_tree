@@ -9,7 +9,7 @@
 #define RED 0
 
 // Following may be defined with custom types as required prior to
-// including the header file. If so, additionally define KEYTPE.
+// including the header file. If so, comp_keys must also be defined.
 #ifndef KEY_TYPE
   #define KEY_TYPE int
   #define DEFAULT_KEY_TYPE 
