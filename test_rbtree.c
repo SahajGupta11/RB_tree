@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <assert.h>
 
 // #define KEY_TYPE int       // any type may be used, int by default
 // #define VALUE_TYPE int
