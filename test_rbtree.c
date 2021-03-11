@@ -56,6 +56,7 @@ int main() {
         printf("%d ", it->key);
     } printf("\n");
 
+    // Map operations
     Rb_tree map = newrbtree();
     for(int i = 0; i < n; i += 2)
         insert(&map, a[i], a[i+1]);
@@ -77,3 +78,35 @@ int main() {
         printf("(%d, %d) ", it->key, it->val);
     } printf("\n");
 }
+
+/* Output:
+Array:
+6
+10 5 6 6 -12 30
+
+Set:
+5
+-12 5 6 10 30
+Set contains 30
+Set does not contain 42
+
+lower_bound(5) = 5
+upper_bound(5) = 6
+lower_bound(17) = 30
+upper_bound(17) = 30
+
+Set after erase(5) and erase(6):
+3
+-12 10 30
+
+
+Map:
+3
+(-12, 30) (6, 6) (10, 5)
+
+map[6]++, map[-12] = -42 and map.insert(100, 1)
+
+In reverse order:
+4
+(100, 1) (10, 5) (6, 7) (-12, -42)
+*/
