@@ -98,3 +98,50 @@ int main() {
     printf("find_by_order(2) = %d\n", find_by_order(&os, 2)->key);
     printf("find_by_order(3) = %d\n", find_by_order(&os, 3)->key);
 }
+
+/* Output:
+Array:
+6
+10 5 6 6 -12 30
+
+Set:
+5
+-12 5 6 10 30
+Set contains 30
+Set does not contain 42
+
+lower_bound(5) = 5
+upper_bound(5) = 6
+lower_bound(17) = 30
+upper_bound(17) = 30
+
+Set after erase(5) and erase(6):
+3
+-12 10 30
+
+
+Map:
+3
+(-12, 30) (6, 6) (10, 5)
+
+map[6]++, map[-12] = -42 and map.insert(100, 1)
+
+In reverse order:
+4
+(100, 1) (10, 5) (6, 7) (-12, -42)
+
+
+Ordered set:
+4
+-100 -1 1 21
+order_of_key(-100) = 0
+order_of_key(1) = 2
+order_of_key(0) = 2
+order_of_key(21) = 3
+order_of_key(22) = 4
+
+find_by_order(0) = -100
+find_by_order(1) = -1
+find_by_order(2) = 1
+find_by_order(3) = 21
+*/
